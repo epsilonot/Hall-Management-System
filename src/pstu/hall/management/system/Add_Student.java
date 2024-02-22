@@ -2,10 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package pstu.hall.management.system;
 
+package pstu.hall.management.system;
+import project.*;
+//import java.sql.Connection;
+//import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.awt.HeadlessException;
+
+import java.sql.*;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -276,6 +283,11 @@ public class Add_Student extends javax.swing.JFrame {
         rSMaterialButtonRectangle2.setBackground(new java.awt.Color(255, 0, 51));
         rSMaterialButtonRectangle2.setText("CANCEL");
         rSMaterialButtonRectangle2.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
+        rSMaterialButtonRectangle2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSMaterialButtonRectangle2ActionPerformed(evt);
+            }
+        });
         jPanel4.add(rSMaterialButtonRectangle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 720, 120, 40));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 720, 770));
@@ -311,8 +323,38 @@ public class Add_Student extends javax.swing.JFrame {
         String Name=jCTextField3.getText();
         String FatherName=jCTextField4.getText();
         String MotherName=jCTextField5.getText();
-        String BirthDate=(TextField)jDateChooser2.getDateEditor().getUiComponent().getText();
+        Date birthdate = jDateChooser2.getDate();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
+        String Birthdate = sdf.format(birthdate);
+        String Hall=(String)jComboBox4.getSelectedItem();
+        String Faculty=(String)jComboBox2.getSelectedItem();
+        String Semister=(String)jComboBox3.getSelectedItem();
+        String Seasson=jCTextField6.getText();
+        String Gender=(String)jComboBox1.getSelectedItem();
+        String Nationality=jCTextField9.getText();
+        String Religious=(String)jComboBox5.getSelectedItem();
+        String PAdderess=jTextArea1.getText();
+        String Email=jCTextField7.getText();
+        String PNumber=jCTextField8.getText();
+        try{
+            Connection con=CProvider.getcon();
+            Statement st=con.createStatement();
+            st.executeUpdate("insert into AddNewStudent values('"+StudentId+"','"+RegiNo+"','"+Name+"',"
+                    + "'"+FatherName+"','"+MotherName+"','"+Birthdate+"','"+Hall+"','"+Faculty+"',"
+                            + "'"+Semister+"','"+Seasson+"','"+Gender+"','"+Nationality+"','"+Religious+"',"
+                                    + "'"+PAdderess+"','"+Email+"','"+PNumber+"')");
+            JOptionPane.showMessageDialog(null, "Successfully Update");
+            setVisible(false); 
+            new Add_Student().setVisible(true);
+        }catch(HeadlessException | SQLException e){
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_rSMaterialButtonRectangle1ActionPerformed
+
+    private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+    }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
 
     /**
      * @param args the command line arguments
