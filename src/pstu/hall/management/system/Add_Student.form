@@ -486,9 +486,14 @@
         <Component class="javax.swing.JComboBox" name="jComboBox2">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="2">
-                <StringItem index="0" value="Computer Science and Engineering (CSE)"/>
-                <StringItem index="1" value="Nutratio"/>
+              <StringArray count="7">
+                <StringItem index="0" value="Faculty of Computer Science and Engineering (CSE)"/>
+                <StringItem index="1" value="Faculty of Nutrition and Food Science (NFS)"/>
+                <StringItem index="2" value="Faculty of Environmental Science and Disaster Management (ESDM)"/>
+                <StringItem index="3" value="Faculty of Agriculture"/>
+                <StringItem index="4" value="Faculty of Business Administration"/>
+                <StringItem index="5" value="Faculty of Fisheries"/>
+                <StringItem index="6" value="Faculty of Law and Land Administration"/>
               </StringArray>
             </Property>
           </Properties>
@@ -544,8 +549,14 @@
         <Component class="javax.swing.JComboBox" name="jComboBox4">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="1">
+              <StringArray count="7">
                 <StringItem index="0" value="M Keramot Ali Hall"/>
+                <StringItem index="1" value="Bangabandhu Sheikh Mujibur Rahman Hall"/>
+                <StringItem index="2" value="Sher-e-Bangla Hall-1"/>
+                <StringItem index="3" value="Sher-e-Bangla Hall-2"/>
+                <StringItem index="4" value="Kobi Begum Sufia Kamal Hall"/>
+                <StringItem index="5" value="Bangamata Sheikh Fazilatun Nesa Hall "/>
+                <StringItem index="6" value=" "/>
               </StringArray>
             </Property>
           </Properties>
@@ -628,11 +639,12 @@
         <Component class="javax.swing.JComboBox" name="jComboBox5">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+              <StringArray count="5">
+                <StringItem index="0" value="Islam"/>
+                <StringItem index="1" value="Buddhism"/>
+                <StringItem index="2" value="Hinduism"/>
+                <StringItem index="3" value="Christianity"/>
+                <StringItem index="4" value=" "/>
               </StringArray>
             </Property>
           </Properties>

@@ -215,7 +215,7 @@ public class Add_Student extends javax.swing.JFrame {
         });
         jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 401, -1, 26));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Computer Science and Engineering (CSE)", "Nutratio" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Faculty of Computer Science and Engineering (CSE)", "Faculty of Nutrition and Food Science (NFS)", "Faculty of Environmental Science and Disaster Management (ESDM)", "Faculty of Agriculture", "Faculty of Business Administration", "Faculty of Fisheries", "Faculty of Law and Land Administration" }));
         jPanel4.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 281, 278, 26));
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Level-I, Semister-1", "Level-I, Semister-2", "Level-II, Semister-1", "Level-II, Semister-2", "Level-III, Semister-1", "Level-III, Semister-2", "Level-IV, Semister-1", "Level-IV, Semister-2" }));
@@ -226,7 +226,7 @@ public class Add_Student extends javax.swing.JFrame {
         jLabel14.setText("Aloted Hall:");
         jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 246, -1, -1));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M Keramot Ali Hall" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M Keramot Ali Hall", "Bangabandhu Sheikh Mujibur Rahman Hall", "Sher-e-Bangla Hall-1", "Sher-e-Bangla Hall-2", "Kobi Begum Sufia Kamal Hall", "Bangamata Sheikh Fazilatun Nesa Hall ", " " }));
         jComboBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox4ActionPerformed(evt);
@@ -252,7 +252,7 @@ public class Add_Student extends javax.swing.JFrame {
         jCTextField9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         jPanel4.add(jCTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(319, 443, 270, 24));
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Islam", "Buddhism", "Hinduism", "Christianity", " " }));
         jPanel4.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(319, 481, 80, -1));
 
         jTextArea1.setColumns(20);
