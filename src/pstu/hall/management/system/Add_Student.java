@@ -4,6 +4,9 @@
  */
 package pstu.hall.management.system;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  *
  * @author epsilone_not
@@ -263,6 +266,11 @@ public class Add_Student extends javax.swing.JFrame {
 
         rSMaterialButtonRectangle1.setText("Update");
         rSMaterialButtonRectangle1.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
+        rSMaterialButtonRectangle1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSMaterialButtonRectangle1ActionPerformed(evt);
+            }
+        });
         jPanel4.add(rSMaterialButtonRectangle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 720, 100, 40));
 
         rSMaterialButtonRectangle2.setBackground(new java.awt.Color(255, 0, 51));
@@ -295,6 +303,16 @@ public class Add_Student extends javax.swing.JFrame {
     private void jCTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCTextField3ActionPerformed
+
+    private void rSMaterialButtonRectangle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle1ActionPerformed
+        // TODO add your handling code here:
+        String StudentId=jCTextField1.getText();
+        String RegiNo=jCTextField2.getText();
+        String Name=jCTextField3.getText();
+        String FatherName=jCTextField4.getText();
+        String MotherName=jCTextField5.getText();
+        String BirthDate=(TextField)jDateChooser2.getDateEditor().getUiComponent().getText();
+    }//GEN-LAST:event_rSMaterialButtonRectangle1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -330,7 +348,15 @@ public class Add_Student extends javax.swing.JFrame {
             }
         });
     }
-
+    private String ChangeDateFormate(Date abc){
+        SimpleDateFormat dt=new SimpleDateFormat("dd/mm/yyyy");
+        try{
+            return dt.format(abc);
+        }
+        catch(Exception e){
+            return " ";
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private app.bolivia.swing.JCTextField jCTextField1;
     private app.bolivia.swing.JCTextField jCTextField2;
