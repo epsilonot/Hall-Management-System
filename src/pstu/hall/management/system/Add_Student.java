@@ -223,7 +223,7 @@ public class Add_Student extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 401, -1, 26));
+        jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, -1, 26));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Faculty of Computer Science and Engineering (CSE)", "Faculty of Nutrition and Food Science (NFS)", "Faculty of Environmental Science and Disaster Management (ESDM)", "Faculty of Agriculture", "Faculty of Business Administration", "Faculty of Fisheries", "Faculty of Law and Land Administration" }));
         jPanel4.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 281, 278, 26));
@@ -260,10 +260,15 @@ public class Add_Student extends javax.swing.JFrame {
         jPanel4.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 515, -1, -1));
 
         jCTextField9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jPanel4.add(jCTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(319, 443, 270, 24));
+        jCTextField9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCTextField9ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jCTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, 270, 24));
 
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Islam", "Buddhism", "Hinduism", "Christianity", " " }));
-        jPanel4.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(319, 481, 80, -1));
+        jPanel4.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 80, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -354,7 +359,12 @@ public class Add_Student extends javax.swing.JFrame {
     private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
+        new Home().setVisible(true);
     }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
+
+    private void jCTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCTextField9ActionPerformed
 
     /**
      * @param args the command line arguments
