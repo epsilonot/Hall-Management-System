@@ -322,7 +322,7 @@ public class Add_Student extends javax.swing.JFrame {
     }//GEN-LAST:event_jCTextField3ActionPerformed
 
     private void rSMaterialButtonRectangle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle1ActionPerformed
-        // TODO add your handling code here:
+        
         String StudentId=jCTextField1.getText();
         String RegiNo=jCTextField2.getText();
         String Name=jCTextField3.getText();
@@ -363,7 +363,7 @@ public class Add_Student extends javax.swing.JFrame {
     }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
 
     private void jCTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField9ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jCTextField9ActionPerformed
 
     /**
