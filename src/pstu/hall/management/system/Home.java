@@ -42,8 +42,6 @@ public class Home extends javax.swing.JFrame {
         jCTextField1 = new app.bolivia.swing.JCTextField();
         rSMaterialButtonRectangle3 = new rojerusan.RSMaterialButtonRectangle();
         jLabel7 = new javax.swing.JLabel();
-        jCTextField2 = new app.bolivia.swing.JCTextField();
-        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jCTextField3 = new app.bolivia.swing.JCTextField();
         jCTextField4 = new app.bolivia.swing.JCTextField();
@@ -113,58 +111,51 @@ public class Home extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Open Sans", 1, 30)); // NOI18N
         jLabel4.setText("Total Female:");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, 230, 50));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 230, 50));
 
-        jCTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 2, 0, 2));
+        jCTextField1.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 5, 0, 5));
         jCTextField1.setFont(new java.awt.Font("Noto Sans", 1, 30)); // NOI18N
         jCTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCTextField1ActionPerformed(evt);
             }
         });
-        jPanel3.add(jCTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 250, 50));
+        jPanel3.add(jCTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 90, 50));
 
         rSMaterialButtonRectangle3.setText("Refress");
+        rSMaterialButtonRectangle3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         rSMaterialButtonRectangle3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rSMaterialButtonRectangle3ActionPerformed(evt);
             }
         });
-        jPanel3.add(rSMaterialButtonRectangle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, 130, 40));
+        jPanel3.add(rSMaterialButtonRectangle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, 130, 50));
 
         jLabel7.setFont(new java.awt.Font("Open Sans", 1, 30)); // NOI18N
         jLabel7.setText("Total Student:");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 230, 50));
-
-        jCTextField2.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 2, 0, 2));
-        jCTextField2.setFont(new java.awt.Font("Noto Sans", 1, 30)); // NOI18N
-        jPanel3.add(jCTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 250, 50));
-
-        jLabel8.setFont(new java.awt.Font("Open Sans", 1, 30)); // NOI18N
-        jLabel8.setText("Total Student:");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 230, 50));
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 230, 50));
 
         jLabel9.setFont(new java.awt.Font("Open Sans", 1, 30)); // NOI18N
         jLabel9.setText("Total Male:");
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 230, 50));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 230, 50));
 
-        jCTextField3.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 2, 0, 2));
+        jCTextField3.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 5, 0, 5));
         jCTextField3.setFont(new java.awt.Font("Noto Sans", 1, 30)); // NOI18N
         jCTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCTextField3ActionPerformed(evt);
             }
         });
-        jPanel3.add(jCTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 250, 50));
+        jPanel3.add(jCTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 90, 50));
 
-        jCTextField4.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 2, 0, 2));
+        jCTextField4.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 5, 0, 5));
         jCTextField4.setFont(new java.awt.Font("Noto Sans", 1, 30)); // NOI18N
         jCTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCTextField4ActionPerformed(evt);
             }
         });
-        jPanel3.add(jCTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 290, 250, 50));
+        jPanel3.add(jCTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, 90, 50));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 940, 770));
 
@@ -188,18 +179,58 @@ public class Home extends javax.swing.JFrame {
         }
         return con;
     }
-    public void execQuery(String query){
+    public void execQuery1(String query){
         
        try{
            
            Connection con = getConnection();
            Statement st = con.createStatement();
            ResultSet rs = st.executeQuery(query);
+         
            
            if(rs.next()){
                jCTextField1.setText(Integer.toString(rs.getInt(1)));
            }else
                System.out.println("No Data Found");
+           
+           
+       }catch(SQLException e){
+           
+       }
+    }
+    public void execQuery2(String query1){
+        
+       try{
+           
+           Connection con = getConnection();
+           Statement st = con.createStatement();
+           ResultSet rs = st.executeQuery(query1);
+         
+           
+           if(rs.next()){
+               jCTextField3.setText(Integer.toString(rs.getInt(1)));
+           }else
+               System.out.println("No Data Found");
+           
+           
+       }catch(SQLException e){
+           
+       }
+    }
+    public void execQuery3(String query2){
+        
+       try{
+           
+           Connection con = getConnection();
+           Statement st = con.createStatement();
+           ResultSet rs = st.executeQuery(query2);
+         
+           
+           if(rs.next()){
+               jCTextField4.setText(Integer.toString(rs.getInt(1)));
+           }else
+               System.out.println("No Data Found");
+           
            
        }catch(SQLException e){
            
@@ -225,7 +256,11 @@ public class Home extends javax.swing.JFrame {
     private void rSMaterialButtonRectangle3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle3ActionPerformed
         // TODO add your handling code here:
         String query = "SELECT COUNT(*) FROM `AddNewStudent` WHERE 1";
-        execQuery(query);
+        execQuery1(query);
+        String query1 = "SELECT COUNT(*) AS male_count FROM AddNewStudent WHERE gender = 'male';";
+        execQuery2(query1);
+        String query2 = "SELECT COUNT(*) AS female_count FROM AddNewStudent WHERE gender = 'female';";
+        execQuery3(query2);
     }//GEN-LAST:event_rSMaterialButtonRectangle3ActionPerformed
 
     private void jCTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField3ActionPerformed
@@ -277,7 +312,6 @@ public class Home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private app.bolivia.swing.JCTextField jCTextField1;
-    private app.bolivia.swing.JCTextField jCTextField2;
     private app.bolivia.swing.JCTextField jCTextField3;
     private app.bolivia.swing.JCTextField jCTextField4;
     private javax.swing.JLabel jLabel1;
@@ -287,7 +321,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
