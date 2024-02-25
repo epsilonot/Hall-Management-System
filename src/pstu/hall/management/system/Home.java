@@ -154,7 +154,7 @@ public class Home extends javax.swing.JFrame {
                 jCTextField4ActionPerformed(evt);
             }
         });
-        jPanel3.add(jCTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, 90, 50));
+        jPanel3.add(jCTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 90, 50));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 940, 770));
 
