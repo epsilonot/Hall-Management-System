@@ -207,7 +207,7 @@ public class Add_Student extends javax.swing.JFrame {
         jCTextField8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         jPanel4.add(jCTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 680, 281, 24));
 
-        jDateChooser2.setDateFormatString("dd/mm/yyyy");
+        jDateChooser2.setDateFormatString("dd/MM/yyyy");
         jDateChooser2.setMinimumSize(new java.awt.Dimension(50, 29));
         jPanel4.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 199, 278, 26));
 
@@ -353,7 +353,7 @@ public class Add_Student extends javax.swing.JFrame {
     private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        new Home().setVisible(true);
+        //new Home().setVisible(true);
     }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
 
     private void jCTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField9ActionPerformed
