@@ -389,6 +389,7 @@ public class Add_Student extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Add_Student().setVisible(true);
             }
