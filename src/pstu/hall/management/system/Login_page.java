@@ -20,9 +20,9 @@ public class Login_page extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jCTextField1 = new app.bolivia.swing.JCTextField();
+        username = new app.bolivia.swing.JCTextField();
         jLabel5 = new javax.swing.JLabel();
-        jCTextField2 = new app.bolivia.swing.JCTextField();
+        passward = new app.bolivia.swing.JCTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         rSMaterialButtonCircle1 = new rojerusan.RSMaterialButtonCircle();
@@ -57,34 +57,34 @@ public class Login_page extends javax.swing.JFrame {
         jLabel4.setText("Login To Your Acoount");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 200, -1));
 
-        jCTextField1.setBackground(new java.awt.Color(102, 102, 255));
-        jCTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
-        jCTextField1.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jCTextField1.setPhColor(new java.awt.Color(255, 255, 255));
-        jCTextField1.setPlaceholder("Enter Username");
-        jCTextField1.addActionListener(new java.awt.event.ActionListener() {
+        username.setBackground(new java.awt.Color(102, 102, 255));
+        username.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
+        username.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        username.setPhColor(new java.awt.Color(255, 255, 255));
+        username.setPlaceholder("Enter Username");
+        username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCTextField1ActionPerformed(evt);
+                usernameActionPerformed(evt);
             }
         });
-        jPanel2.add(jCTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 330, -1));
+        jPanel2.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 330, -1));
 
         jLabel5.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Passward");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 110, -1));
 
-        jCTextField2.setBackground(new java.awt.Color(102, 102, 255));
-        jCTextField2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
-        jCTextField2.setFont(new java.awt.Font("Noto Sans", 0, 14)); // NOI18N
-        jCTextField2.setPhColor(new java.awt.Color(255, 255, 255));
-        jCTextField2.setPlaceholder("Enter Passward");
-        jCTextField2.addActionListener(new java.awt.event.ActionListener() {
+        passward.setBackground(new java.awt.Color(102, 102, 255));
+        passward.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
+        passward.setFont(new java.awt.Font("Noto Sans", 0, 14)); // NOI18N
+        passward.setPhColor(new java.awt.Color(255, 255, 255));
+        passward.setPlaceholder("Enter Passward");
+        passward.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCTextField2ActionPerformed(evt);
+                passwardActionPerformed(evt);
             }
         });
-        jPanel2.add(jCTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 330, -1));
+        jPanel2.add(passward, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 330, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pstu/hall/management/system/icons8_Secure_50px.png"))); // NOI18N
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 50, 60));
@@ -115,17 +115,17 @@ public class Login_page extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jCTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField1ActionPerformed
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
         
-    }//GEN-LAST:event_jCTextField1ActionPerformed
+    }//GEN-LAST:event_usernameActionPerformed
 
-    private void jCTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField2ActionPerformed
+    private void passwardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwardActionPerformed
         
-    }//GEN-LAST:event_jCTextField2ActionPerformed
+    }//GEN-LAST:event_passwardActionPerformed
 
     private void rSMaterialButtonCircle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle1ActionPerformed
         
-        if(jCTextField1.getText().equals("afridi") && jCTextField2.getText().equals("afridi")){
+        if(username.getText().equals("afridi") && passward.getText().equals("afridi")){
             setVisible(false);
             new Home().setVisible(true);
         }
@@ -163,8 +163,6 @@ public class Login_page extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private app.bolivia.swing.JCTextField jCTextField1;
-    private app.bolivia.swing.JCTextField jCTextField2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -173,6 +171,8 @@ public class Login_page extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
+    private app.bolivia.swing.JCTextField passward;
     private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
+    private app.bolivia.swing.JCTextField username;
     // End of variables declaration//GEN-END:variables
 }
