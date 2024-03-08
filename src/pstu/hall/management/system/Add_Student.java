@@ -353,7 +353,7 @@ public class Add_Student extends javax.swing.JFrame {
     private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        //new Home().setVisible(true);
+        new Home().setVisible(true);
     }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
 
     private void jCTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField9ActionPerformed
