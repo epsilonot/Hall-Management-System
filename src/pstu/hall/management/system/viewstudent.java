@@ -57,21 +57,20 @@ public class viewstudent extends javax.swing.JFrame {
         jCTextField6 = new app.bolivia.swing.JCTextField();
         jCTextField7 = new app.bolivia.swing.JCTextField();
         jCTextField8 = new app.bolivia.swing.JCTextField();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jCTextField9 = new app.bolivia.swing.JCTextField();
-        jComboBox5 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        rSMaterialButtonRectangle1 = new rojerusan.RSMaterialButtonRectangle();
         rSMaterialButtonRectangle2 = new rojerusan.RSMaterialButtonRectangle();
+        jCTextField10 = new app.bolivia.swing.JCTextField();
+        jCTextField11 = new app.bolivia.swing.JCTextField();
+        jCTextField12 = new app.bolivia.swing.JCTextField();
+        jCTextField13 = new app.bolivia.swing.JCTextField();
+        jCTextField14 = new app.bolivia.swing.JCTextField();
+        jCTextField15 = new app.bolivia.swing.JCTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -130,7 +129,7 @@ public class viewstudent extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Gender");
+        jLabel6.setText("Gender:");
         jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 399, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
@@ -199,7 +198,7 @@ public class viewstudent extends javax.swing.JFrame {
         jPanel4.add(jCTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 163, 285, 24));
 
         jCTextField6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
-        jPanel4.add(jCTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 363, 278, 24));
+        jPanel4.add(jCTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 360, 278, 24));
 
         jCTextField7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         jPanel4.add(jCTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 640, 281, 24));
@@ -207,36 +206,10 @@ public class viewstudent extends javax.swing.JFrame {
         jCTextField8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         jPanel4.add(jCTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 680, 281, 24));
 
-        jDateChooser2.setDateFormatString("dd/MM/yyyy");
-        jDateChooser2.setMinimumSize(new java.awt.Dimension(50, 29));
-        jPanel4.add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 199, 278, 26));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Others" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, -1, 26));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Faculty of Computer Science and Engineering (CSE)", "Faculty of Nutrition and Food Science (NFS)", "Faculty of Environmental Science and Disaster Management (ESDM)", "Faculty of Agriculture", "Faculty of Business Administration", "Faculty of Fisheries", "Faculty of Law and Land Administration" }));
-        jPanel4.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 281, 278, 26));
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Level-I, Semister-1", "Level-I, Semister-2", "Level-II, Semister-1", "Level-II, Semister-2", "Level-III, Semister-1", "Level-III, Semister-2", "Level-IV, Semister-1", "Level-IV, Semister-2" }));
-        jPanel4.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 321, -1, 26));
-
         jLabel14.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Aloted Hall:");
         jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 246, -1, -1));
-
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M Keramot Ali Hall", "Bangabandhu Sheikh Mujibur Rahman Hall", "Sher-e-Bangla Hall-1", "Sher-e-Bangla Hall-2", "Kobi Begum Sufia Kamal Hall", "Bangamata Sheikh Fazilatun Nesa Hall ", " " }));
-        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox4ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 248, 278, -1));
 
         jLabel15.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
@@ -261,23 +234,11 @@ public class viewstudent extends javax.swing.JFrame {
         });
         jPanel4.add(jCTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, 270, 24));
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Islam", "Buddhism", "Hinduism", "Christianity", " " }));
-        jPanel4.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 80, -1));
-
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 515, 376, -1));
-
-        rSMaterialButtonRectangle1.setText("Update");
-        rSMaterialButtonRectangle1.setFont(new java.awt.Font("Roboto Medium", 1, 14)); // NOI18N
-        rSMaterialButtonRectangle1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rSMaterialButtonRectangle1ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(rSMaterialButtonRectangle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 720, 100, 40));
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 520, 376, -1));
 
         rSMaterialButtonRectangle2.setBackground(new java.awt.Color(255, 0, 51));
         rSMaterialButtonRectangle2.setText("CANCEL");
@@ -288,6 +249,34 @@ public class viewstudent extends javax.swing.JFrame {
             }
         });
         jPanel4.add(rSMaterialButtonRectangle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 720, 120, 40));
+
+        jCTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        jCTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCTextField10ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jCTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 285, 24));
+
+        jCTextField11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        jCTextField11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCTextField11ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jCTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 285, 24));
+
+        jCTextField12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        jPanel4.add(jCTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 285, 24));
+
+        jCTextField13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        jPanel4.add(jCTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 285, 24));
+
+        jCTextField14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        jPanel4.add(jCTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 400, 285, 24));
+
+        jCTextField15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        jPanel4.add(jCTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 285, 24));
 
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 720, 770));
 
@@ -303,62 +292,27 @@ public class viewstudent extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCTextField2ActionPerformed
 
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
     private void jCTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCTextField3ActionPerformed
 
-    private void rSMaterialButtonRectangle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle1ActionPerformed
-        
-        String StudentId=jCTextField1.getText();
-        String RegiNo=jCTextField2.getText();
-        String Name=jCTextField3.getText();
-        String FatherName=jCTextField4.getText();
-        String MotherName=jCTextField5.getText();
-        Date birthdate = jDateChooser2.getDate();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
-        String Birthdate = sdf.format(birthdate);
-        String Hall=(String)jComboBox4.getSelectedItem();
-        String Faculty=(String)jComboBox2.getSelectedItem();
-        String Semister=(String)jComboBox3.getSelectedItem();
-        String Seasson=jCTextField6.getText();
-        String Gender=(String)jComboBox1.getSelectedItem();
-        String Nationality=jCTextField9.getText();
-        String Religious=(String)jComboBox5.getSelectedItem();
-        String PAdderess=jTextArea1.getText();
-        String Email=jCTextField7.getText();
-        String PNumber=jCTextField8.getText();
-        try{
-            Connection con=CProvider.getcon();
-            Statement st=con.createStatement();
-            st.executeUpdate("insert into AddNewStudent values('"+StudentId+"','"+RegiNo+"','"+Name+"',"
-                    + "'"+FatherName+"','"+MotherName+"','"+Birthdate+"','"+Hall+"','"+Faculty+"',"
-                            + "'"+Semister+"','"+Seasson+"','"+Gender+"','"+Nationality+"','"+Religious+"',"
-                                    + "'"+PAdderess+"','"+Email+"','"+PNumber+"')");
-            JOptionPane.showMessageDialog(null, "Successfully Update");
-            setVisible(false); 
-            new viewstudent().setVisible(true);
-        }catch(HeadlessException | SQLException e){
-            JOptionPane.showMessageDialog(null, e);
-        }
-    }//GEN-LAST:event_rSMaterialButtonRectangle1ActionPerformed
-
     private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        new Home().setVisible(true);
+        new SearchStudent().setVisible(true);
     }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
 
     private void jCTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField9ActionPerformed
         
     }//GEN-LAST:event_jCTextField9ActionPerformed
+
+    private void jCTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCTextField10ActionPerformed
+
+    private void jCTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCTextField11ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -407,6 +361,12 @@ public class viewstudent extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private app.bolivia.swing.JCTextField jCTextField1;
+    private app.bolivia.swing.JCTextField jCTextField10;
+    private app.bolivia.swing.JCTextField jCTextField11;
+    private app.bolivia.swing.JCTextField jCTextField12;
+    private app.bolivia.swing.JCTextField jCTextField13;
+    private app.bolivia.swing.JCTextField jCTextField14;
+    private app.bolivia.swing.JCTextField jCTextField15;
     private app.bolivia.swing.JCTextField jCTextField2;
     private app.bolivia.swing.JCTextField jCTextField3;
     private app.bolivia.swing.JCTextField jCTextField4;
@@ -415,12 +375,6 @@ public class viewstudent extends javax.swing.JFrame {
     private app.bolivia.swing.JCTextField jCTextField7;
     private app.bolivia.swing.JCTextField jCTextField8;
     private app.bolivia.swing.JCTextField jCTextField9;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -444,7 +398,6 @@ public class viewstudent extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle1;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle2;
     private rojerusan.RSMaterialButtonRectangleBeanInfo rSMaterialButtonRectangleBeanInfo1;
     // End of variables declaration//GEN-END:variables
