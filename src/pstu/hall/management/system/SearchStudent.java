@@ -43,6 +43,7 @@ public class SearchStudent extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jCTextField1 = new app.bolivia.swing.JCTextField();
         rSMaterialButtonRectangle1 = new rojerusan.RSMaterialButtonRectangle();
+        rSMaterialButtonRectangle3 = new rojerusan.RSMaterialButtonRectangle();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         rSMaterialButtonRectangle2 = new rojerusan.RSMaterialButtonRectangle();
@@ -60,6 +61,8 @@ public class SearchStudent extends javax.swing.JFrame {
 
         jCTextField1.setBackground(new java.awt.Color(28, 87, 57));
         jCTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jCTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jCTextField1.setFont(new java.awt.Font("Noto Sans", 1, 18)); // NOI18N
         jCTextField1.setPhColor(new java.awt.Color(255, 255, 255));
         jCTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -76,6 +79,9 @@ public class SearchStudent extends javax.swing.JFrame {
             }
         });
         jPanel1.add(rSMaterialButtonRectangle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 30, 150, 50));
+
+        rSMaterialButtonRectangle3.setText("Search");
+        jPanel1.add(rSMaterialButtonRectangle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 110, 50));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1290, 100));
 
@@ -294,5 +300,6 @@ public class SearchStudent extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle1;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle2;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle3;
     // End of variables declaration//GEN-END:variables
 }
