@@ -81,6 +81,11 @@ public class SearchStudent extends javax.swing.JFrame {
         jPanel1.add(rSMaterialButtonRectangle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 30, 150, 50));
 
         rSMaterialButtonRectangle3.setText("Search");
+        rSMaterialButtonRectangle3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSMaterialButtonRectangle3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(rSMaterialButtonRectangle3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 110, 50));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1290, 100));
@@ -256,6 +261,12 @@ public class SearchStudent extends javax.swing.JFrame {
         setVisible(false);
         new Home().setVisible(true);
     }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
+
+    private void rSMaterialButtonRectangle3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle3ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new viewstudent().setVisible(true);
+    }//GEN-LAST:event_rSMaterialButtonRectangle3ActionPerformed
 
     /**
      * @param args the command line arguments
