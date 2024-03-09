@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package pstu.hall.management.system;
-import project.*;
+//import project.*;
 import java.sql.*;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -14,9 +14,7 @@ import javax.swing.table.TableRowSorter;
  */
 public class SearchStudent extends javax.swing.JFrame {
 
-    /**
-     * Creates new form SearchStudent
-     */
+    
     Connection con;
     public SearchStudent() {
         initComponents();
@@ -25,7 +23,7 @@ public class SearchStudent extends javax.swing.JFrame {
         String  pass="";
         try{
             con=DriverManager.getConnection(url, user, pass);
-        }catch(Exception e){
+        }catch(SQLException e){
             System.out.println(e.getMessage());
         }
     }
@@ -251,7 +249,7 @@ public class SearchStudent extends javax.swing.JFrame {
                     rs.getString(7),rs.getString(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13),
                     rs.getString(14),rs.getString(15),rs.getString(16)});
             }
-        }catch(Exception e){
+        }catch(SQLException e){
             System.out.println(e.getMessage());
         }
     }//GEN-LAST:event_rSMaterialButtonRectangle1ActionPerformed
@@ -264,8 +262,9 @@ public class SearchStudent extends javax.swing.JFrame {
 
     private void rSMaterialButtonRectangle3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle3ActionPerformed
         // TODO add your handling code here:
+        String stid=jCTextField1.getText();
         setVisible(false);
-        new viewstudent().setVisible(true);
+        new viewstudent("stid").setVisible(true);
     }//GEN-LAST:event_rSMaterialButtonRectangle3ActionPerformed
 
     /**

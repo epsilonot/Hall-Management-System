@@ -5,8 +5,8 @@
 
 package pstu.hall.management.system;
 import project.*;
-//import java.sql.Connection;
-//import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.awt.HeadlessException;
@@ -21,10 +21,48 @@ import javax.swing.JOptionPane;
 public class viewstudent extends javax.swing.JFrame {
 
     
-    public viewstudent() {
+    public viewstudent(String stid) {
         initComponents();
-    }
+        
+        String url = "jdbc:mysql://localhost:3306/Hall_Management_System";
+        String username = "root";
+        String password = "";
+        String query = "SELECT * FROM addstudent WHERE StudentId = ?";
+        
+        try (Connection connection = DriverManager.getConnection(url, username, password);
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
+            preparedStatement.setString(1, stid);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs.next()) {
+               jCTextField1.setText(rs.getString(1));
+               jCTextField2.setText(rs.getString(2));
+               jCTextField3.setText(rs.getString(3));
+               jCTextField4.setText(rs.getString(4));
+               jCTextField5.setText(rs.getString(5));
+               jCTextField10.setText(rs.getString(6));
+               jCTextField11.setText(rs.getString(7));
+               jCTextField12.setText(rs.getString(8));
+               jCTextField13.setText(rs.getString(9));
+               jCTextField6.setText(rs.getString(10));
+               jCTextField14.setText(rs.getString(11));
+               jCTextField9.setText(rs.getString(12));
+               jCTextField15.setText(rs.getString(13));
+               jTextArea1.setText(rs.getString(14));
+               jCTextField7.setText(rs.getString(15));
+               jCTextField8.setText(rs.getString(16));
+            } else {
+                JOptionPane.showMessageDialog(this, "Student not found.");
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error occurred while retrieving student information.");
+        } 
+    
+    }
+    
     
     
     @SuppressWarnings("unchecked")
@@ -346,7 +384,7 @@ public class viewstudent extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new viewstudent().setVisible(true);
+                new viewstudent("stid").setVisible(true);
             }
         });
     }

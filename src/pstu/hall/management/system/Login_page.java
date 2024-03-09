@@ -9,7 +9,7 @@ public class Login_page extends javax.swing.JFrame {
     public Login_page() {
         initComponents();
     }
-
+    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
