@@ -5,8 +5,7 @@
 
 package pstu.hall.management.system;
 import project.*;
-//import java.sql.Connection;
-//import java.sql.Statement;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.awt.HeadlessException;
@@ -14,10 +13,7 @@ import java.awt.HeadlessException;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author epsilone_not
- */
+
 public class Add_Student extends javax.swing.JFrame {
 
     
@@ -130,7 +126,7 @@ public class Add_Student extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Gender");
+        jLabel6.setText("Gender:");
         jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 399, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
@@ -240,7 +236,7 @@ public class Add_Student extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Nationality:");
+        jLabel15.setText("Room Allocation:");
         jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 439, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
@@ -262,7 +258,7 @@ public class Add_Student extends javax.swing.JFrame {
         jPanel4.add(jCTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, 270, 24));
 
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Islam", "Buddhism", "Hinduism", "Christianity", " " }));
-        jPanel4.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 80, -1));
+        jPanel4.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 110, -1));
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -296,23 +292,23 @@ public class Add_Student extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField1ActionPerformed
-        // TODO add your handling code here:
+ 
     }//GEN-LAST:event_jCTextField1ActionPerformed
 
     private void jCTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField2ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jCTextField2ActionPerformed
 
     private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jComboBox4ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jCTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField3ActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jCTextField3ActionPerformed
 
     private void rSMaterialButtonRectangle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle1ActionPerformed
@@ -351,7 +347,7 @@ public class Add_Student extends javax.swing.JFrame {
     }//GEN-LAST:event_rSMaterialButtonRectangle1ActionPerformed
 
     private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
-        // TODO add your handling code here:
+       
         setVisible(false);
         new Home().setVisible(true);
     }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
@@ -360,15 +356,8 @@ public class Add_Student extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jCTextField9ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -385,9 +374,7 @@ public class Add_Student extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Add_Student.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-
-        /* Create and display the form */
+      
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {

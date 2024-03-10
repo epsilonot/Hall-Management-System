@@ -14,10 +14,7 @@ import java.awt.HeadlessException;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author epsilone_not
- */
+
 public class viewstudent extends javax.swing.JFrame {
     
     
@@ -218,7 +215,7 @@ public class viewstudent extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Nationality:");
+        jLabel15.setText("Room Allocation");
         jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 439, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
@@ -272,7 +269,7 @@ public class viewstudent extends javax.swing.JFrame {
         jPanel4.add(jCTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 285, 24));
 
         jCTextField12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-        jPanel4.add(jCTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 285, 24));
+        jPanel4.add(jCTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 340, 24));
 
         jCTextField13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         jPanel4.add(jCTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 285, 24));
@@ -298,19 +295,19 @@ public class viewstudent extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField1ActionPerformed
-        // TODO add your handling code here:
+ 
     }//GEN-LAST:event_jCTextField1ActionPerformed
 
     private void jCTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField2ActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_jCTextField2ActionPerformed
 
     private void jCTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField3ActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_jCTextField3ActionPerformed
 
     private void rSMaterialButtonRectangle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle2ActionPerformed
-        // TODO add your handling code here:
+       
         setVisible(false);
         new SearchStudent().setVisible(true);
     }//GEN-LAST:event_rSMaterialButtonRectangle2ActionPerformed
@@ -320,28 +317,26 @@ public class viewstudent extends javax.swing.JFrame {
     }//GEN-LAST:event_jCTextField9ActionPerformed
 
     private void jCTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField10ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jCTextField10ActionPerformed
 
     private void jCTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField11ActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jCTextField11ActionPerformed
 
     private void rSMaterialButtonRectangle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle1ActionPerformed
-        // TODO add your handling code here:
-         String url = "jdbc:mysql://localhost:3306/Hall_Management_System";
-        String username = "root";
-        String password = "";
+       
+         
         String query = "SELECT * FROM AddNewStudent WHERE StudentId LIKE '%" + jCTextField1.getText() + "%'";
 
-        try (Connection connection = DriverManager.getConnection(url, username, password);
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Hall_Management_System", "root", "");
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-            //preparedStatement.setString(1, stid);
+            
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {
-               //jCTextField1.setText(rs.getString(1));
+             
                jCTextField2.setText(rs.getString(2));
                jCTextField3.setText(rs.getString(3));
                jCTextField4.setText(rs.getString(4));
@@ -367,15 +362,9 @@ public class viewstudent extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_rSMaterialButtonRectangle1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+       
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -392,10 +381,8 @@ public class viewstudent extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(viewstudent.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
+      
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {

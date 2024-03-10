@@ -147,7 +147,7 @@
                 <Column editable="false" title="Semister" type="java.lang.String"/>
                 <Column editable="false" title="Seasion" type="java.lang.String"/>
                 <Column editable="false" title="Gender" type="java.lang.String"/>
-                <Column editable="false" title="Nationality" type="java.lang.String"/>
+                <Column editable="false" title="Room Allocation" type="java.lang.String"/>
                 <Column editable="false" title="Religious" type="java.lang.String"/>
                 <Column editable="false" title="Pa Adderss" type="java.lang.String"/>
                 <Column editable="false" title="Email" type="java.lang.String"/>
