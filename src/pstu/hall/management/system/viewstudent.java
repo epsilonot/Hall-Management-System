@@ -19,47 +19,13 @@ import javax.swing.JOptionPane;
  * @author epsilone_not
  */
 public class viewstudent extends javax.swing.JFrame {
-
     
-    public viewstudent(String stid) {
+    
+    public viewstudent() {
+        
         initComponents();
         
-        String url = "jdbc:mysql://localhost:3306/Hall_Management_System";
-        String username = "root";
-        String password = "";
-        String query = "SELECT * FROM addstudent WHERE StudentId = ?";
-        
-        try (Connection connection = DriverManager.getConnection(url, username, password);
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-
-            preparedStatement.setString(1, stid);
-            ResultSet rs = preparedStatement.executeQuery();
-
-            if (rs.next()) {
-               jCTextField1.setText(rs.getString(1));
-               jCTextField2.setText(rs.getString(2));
-               jCTextField3.setText(rs.getString(3));
-               jCTextField4.setText(rs.getString(4));
-               jCTextField5.setText(rs.getString(5));
-               jCTextField10.setText(rs.getString(6));
-               jCTextField11.setText(rs.getString(7));
-               jCTextField12.setText(rs.getString(8));
-               jCTextField13.setText(rs.getString(9));
-               jCTextField6.setText(rs.getString(10));
-               jCTextField14.setText(rs.getString(11));
-               jCTextField9.setText(rs.getString(12));
-               jCTextField15.setText(rs.getString(13));
-               jTextArea1.setText(rs.getString(14));
-               jCTextField7.setText(rs.getString(15));
-               jCTextField8.setText(rs.getString(16));
-            } else {
-                JOptionPane.showMessageDialog(this, "Student not found.");
-            }
-
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(this, "Error occurred while retrieving student information.");
-        } 
+       
     
     }
     
@@ -109,6 +75,7 @@ public class viewstudent extends javax.swing.JFrame {
         jCTextField13 = new app.bolivia.swing.JCTextField();
         jCTextField14 = new app.bolivia.swing.JCTextField();
         jCTextField15 = new app.bolivia.swing.JCTextField();
+        rSMaterialButtonRectangle1 = new rojerusan.RSMaterialButtonRectangle();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -316,6 +283,14 @@ public class viewstudent extends javax.swing.JFrame {
         jCTextField15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         jPanel4.add(jCTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 285, 24));
 
+        rSMaterialButtonRectangle1.setText("Search");
+        rSMaterialButtonRectangle1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSMaterialButtonRectangle1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(rSMaterialButtonRectangle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, 80, 40));
+
         getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 720, 770));
 
         setSize(new java.awt.Dimension(720, 920));
@@ -352,6 +327,46 @@ public class viewstudent extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCTextField11ActionPerformed
 
+    private void rSMaterialButtonRectangle1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonRectangle1ActionPerformed
+        // TODO add your handling code here:
+         String url = "jdbc:mysql://localhost:3306/Hall_Management_System";
+        String username = "root";
+        String password = "";
+        String query = "SELECT * FROM AddNewStudent WHERE StudentId LIKE '%" + jCTextField1.getText() + "%'";
+
+        try (Connection connection = DriverManager.getConnection(url, username, password);
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            //preparedStatement.setString(1, stid);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs.next()) {
+               //jCTextField1.setText(rs.getString(1));
+               jCTextField2.setText(rs.getString(2));
+               jCTextField3.setText(rs.getString(3));
+               jCTextField4.setText(rs.getString(4));
+               jCTextField5.setText(rs.getString(5));
+               jCTextField10.setText(rs.getString(6));
+               jCTextField11.setText(rs.getString(7));
+               jCTextField12.setText(rs.getString(8));
+               jCTextField13.setText(rs.getString(9));
+               jCTextField6.setText(rs.getString(10));
+               jCTextField14.setText(rs.getString(11));
+               jCTextField9.setText(rs.getString(12));
+               jCTextField15.setText(rs.getString(13));
+               jTextArea1.setText(rs.getString(14));
+               jCTextField7.setText(rs.getString(15));
+               jCTextField8.setText(rs.getString(16));
+            } else {
+                JOptionPane.showMessageDialog(this, "Student not found.");
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error occurred while retrieving student information.");
+        } 
+    }//GEN-LAST:event_rSMaterialButtonRectangle1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -384,7 +399,7 @@ public class viewstudent extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new viewstudent("stid").setVisible(true);
+                new viewstudent().setVisible(true);
             }
         });
     }
@@ -436,6 +451,7 @@ public class viewstudent extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle1;
     private rojerusan.RSMaterialButtonRectangle rSMaterialButtonRectangle2;
     private rojerusan.RSMaterialButtonRectangleBeanInfo rSMaterialButtonRectangleBeanInfo1;
     // End of variables declaration//GEN-END:variables

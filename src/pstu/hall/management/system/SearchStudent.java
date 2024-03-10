@@ -14,7 +14,7 @@ import javax.swing.table.TableRowSorter;
  */
 public class SearchStudent extends javax.swing.JFrame {
 
-    
+   
     Connection con;
     public SearchStudent() {
         initComponents();
@@ -60,7 +60,7 @@ public class SearchStudent extends javax.swing.JFrame {
         jCTextField1.setBackground(new java.awt.Color(28, 87, 57));
         jCTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         jCTextField1.setForeground(new java.awt.Color(255, 255, 255));
-        jCTextField1.setFont(new java.awt.Font("Noto Sans", 1, 18)); // NOI18N
+        jCTextField1.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
         jCTextField1.setPhColor(new java.awt.Color(255, 255, 255));
         jCTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -264,7 +264,7 @@ public class SearchStudent extends javax.swing.JFrame {
         // TODO add your handling code here:
         String stid=jCTextField1.getText();
         setVisible(false);
-        new viewstudent("stid").setVisible(true);
+        new viewstudent().setVisible(true);
     }//GEN-LAST:event_rSMaterialButtonRectangle3ActionPerformed
 
     /**
